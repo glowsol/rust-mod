@@ -1,4 +1,4 @@
-mod secret_lang{
+pub mod secret_lib{
     pub mod pig_latin{
         use std::io;
         pub fn converter() -> String {
@@ -38,21 +38,4 @@ mod secret_lang{
         }
         
     }
-}
-use pig_latin::secret_lang2::pig_latin2;
-mod seclang;
-fn main() {
-    println!("Please enter String to convert into Pig Latin:");
-    let pl_str = secret_lang::pig_latin::converter();
-    println!("{:#?}",pl_str);
-    
-    println!("------------------Library------------------");
-    println!("Please enter String to convert into Pig Latin:");
-    let pl_str = seclang::secret_lib::pig_latin::converter();
-    println!("{:#?}",pl_str);
-
-    println!("------------------Library Crate------------------");
-    println!("Please enter String to convert into Pig Latin:");
-    let pl_str = pig_latin2::converter2();
-    println!("{:#?}",pl_str);
 }
